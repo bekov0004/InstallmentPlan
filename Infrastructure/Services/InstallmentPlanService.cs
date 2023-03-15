@@ -69,40 +69,13 @@ public class InstallmentPlanService
                 Installment = installmentRange,
                 TotlPrices = (x.Prices) + ((x.Prices * commission) / 100),
                 InstallmentPlan = ((x.Prices) + ((x.Prices * commission) / 100)) / installmentRange
-            }).ToListAsync();
-
+            }).ToListAsync(); 
         return new Response<List<ProductDto>>(filter);
         
 
 
     }
 
-     /*using System.Net;
-using System.Net.Mail;
-
-string from = "sender@example.com";
-string to = "recipient@example.com";
-string subject = "Test Email";
-string body = "This is a test email.";
-
-MailMessage message = new MailMessage(from, to, subject, body);
-
-SmtpClient client = new SmtpClient("smtp.example.com", 587);
-client.Credentials = new NetworkCredential("username", "password");
-client.EnableSsl = true;
-
-try
-{
-    client.Send(message);
-    Console.WriteLine("Email sent successfully.");
-}
-catch (Exception ex)
-{
-    Console.WriteLine("Error: " + ex.Message);
-}*/
-
-
-     
-
+    
 
 }
